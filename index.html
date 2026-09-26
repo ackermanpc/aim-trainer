@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="menu">
+            <h1>🎯 Aim Trainer</h1>
+            <div class="mode-selector">
+                <button class="mode-btn" data-mode="flicks">
+                    <span class="mode-title">Flicks</span>
+                    <span class="mode-desc">Click targets before they disappear</span>
+                </button>
+                <button class="mode-btn" data-mode="tracking">
+                    <span class="mode-title">Tracking</span>
+                    <span class="mode-desc">Follow the target across the screen</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="hud">
+                <div class="stat">
+                    <span class="label">Score</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Accuracy</span>
+                    <span class="value" id="accuracy">0%</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Time</span>
+                    <span class="value" id="timer">30</span>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas"></canvas>
+
+            <div class="crosshair" id="crosshair"></div>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Game Over!</h2>
+            <div class="results-stats">
+                <div class="result-item">
+                    <span class="result-label">Score</span>
+                    <span class="result-value" id="finalScore">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Accuracy</span>
+                    <span class="result-value" id="finalAccuracy">0%</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Targets Hit</span>
+                    <span class="result-value" id="finalHits">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Total Clicks</span>
+                    <span class="result-value" id="finalClicks">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Mode</span>
+                    <span class="result-value" id="finalMode">-</span>
+                </div>
+            </div>
+            <button class="play-again-btn" id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
